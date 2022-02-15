@@ -1,6 +1,33 @@
 package leetcode;
 
 public class Partition_Equal_Subset_Sum {
+	
+	/*----------------------------------------------------------------------------------------------------*/
+	
+    public static boolean canPartitionIterative(int[] nums) {
+        if(nums == null || nums.length < 2){
+            return false;
+        }
+        int target = 0;
+        for(int i : nums){
+            target += i;
+        }
+        if(target % 2 != 0){
+            return false;
+        }
+        target /= 2;
+        boolean[] dp = new boolean[target + 1];
+        dp[0] = true;
+        for(int i=0;i<nums.length;i++){
+            int num = nums[i];
+            for(int j=target;j>=num;j--){
+                dp[j] = dp[j] || dp[j-num];
+            }
+        }
+        return dp[target];
+    }
+    
+	/*----------------------------------------------------------------------------------------------------*/
 
     public static boolean helper(int target, int i, int[] nums){
         if(target == 0){
@@ -25,10 +52,11 @@ public class Partition_Equal_Subset_Sum {
         }
         return helper(target/2, 0, nums);
     }
+    
+	/*----------------------------------------------------------------------------------------------------*/
+
 	public static void main(String[] args) {
-		
 		System.out.println(canPartition(new int[] {1,5,11,5}));
-		
 	}
 
 }
