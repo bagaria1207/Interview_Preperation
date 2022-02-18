@@ -16,7 +16,6 @@ public class MethodReference {
 
 		List<Integer> value = list.stream()
 				.map(Integer::parseInt)
-				.sorted()
 				.filter(aux -> (aux < 11))
 				.sorted(Comparator.reverseOrder())
 				.collect(Collectors.toList());

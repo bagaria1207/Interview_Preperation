@@ -19,16 +19,16 @@ public class BiPredicateExample {
 		};
 		
 		List<Car> resultPredFirst = filteredCar(cars, bi);
-		System.out.println(resultPredFirst);
+		System.out.println("First " + resultPredFirst);
 		
 		List<Car> resultPredSecond = filteredCar(cars, (car, price) -> price > 5.0);
-		System.out.println(resultPredSecond);
+		System.out.println("Second " + resultPredSecond);
 		
 		List<Car> resultPredThird = filteredCar(cars, (car, price) -> !car.startsWith("Z") && price > 2.0);
 		resultPredThird
 		.forEach((car) -> {
 			if(car!=null)
-				System.out.println(car.getName() + " " + car.getPrice()); 
+				System.out.println("Third " + car.getName() + " " + car.getPrice()); 
 			});
 		
 	}

@@ -21,6 +21,7 @@ public class Partition_Equal_Subset_Sum {
         for(int i=0;i<nums.length;i++){
             int num = nums[i];
             for(int j=target;j>=num;j--){
+            	System.out.println("dp[j] " + dp[j] + " j " + j + " Target " + target + " num " + num);
                 dp[j] = dp[j] || dp[j-num];
             }
         }
@@ -56,7 +57,7 @@ public class Partition_Equal_Subset_Sum {
 	/*----------------------------------------------------------------------------------------------------*/
 
 	public static void main(String[] args) {
-		System.out.println(canPartition(new int[] {1,5,11,5}));
+		System.out.println(canPartitionIterative(new int[] {1,2,3}));
 	}
 
 }
