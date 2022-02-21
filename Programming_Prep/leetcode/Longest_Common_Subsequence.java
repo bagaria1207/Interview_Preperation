@@ -65,9 +65,9 @@ public class Longest_Common_Subsequence {
     	return ans;
     }
 	public static void main(String[] args) {
-		System.out.println(sizeLongestCommonSubsequence("sea", "eat"));
-		System.out.println(printLongestCommonSubsequence("sea", "eat"));
-		System.out.println(printLongestCommonSubsequence("acbcf", "abcdaf"));
+//		System.out.println(sizeLongestCommonSubsequence("sea", "eat"));
+//		System.out.println(printLongestCommonSubsequence("sea", "eat"));
+//		System.out.println(printLongestCommonSubsequence("acbcf", "abcdaf"));
 		
 		System.out.println(printShortestSuperSubsequence("sea", "eat"));
 	}
