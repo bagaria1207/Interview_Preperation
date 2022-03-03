@@ -23,6 +23,7 @@ public class FactoryTesting {
 		fc.getRate();
 		fc.calculateBill(units);
 		
+		sc.close();
 	}
 
 }
