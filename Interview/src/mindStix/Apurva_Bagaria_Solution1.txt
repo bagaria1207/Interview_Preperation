@@ -1,0 +1,16 @@
+class Main {
+  public static void findMinimumSet(String s, int Y){
+    String temp = "";
+    for(int i=0; i<s.length(); i++){
+      temp += s.charAt(i);
+      // System.out.println(temp + " " + temp+s.charAt(i));
+      if(Integer.parseInt(temp) < Y && Integer.parseInt(temp+s.charAt(i)) > Y){
+        System.out.print(Integer.parseInt(temp) + " ");
+        temp = "";
+      }
+    }
+  }
+  public static void main(String[] args) {
+    findMinimumSet("1234", 30);
+  }
+}

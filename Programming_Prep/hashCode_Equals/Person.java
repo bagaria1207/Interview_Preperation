@@ -1,8 +1,12 @@
 package hashCode_Equals;
 
-public class Person {
+public class Person{
 	
 	public int personId;
+	public int getPersonId() {
+		return personId;
+	}
+
 	public String name;
 	
 	public Person(int personId, String name) {

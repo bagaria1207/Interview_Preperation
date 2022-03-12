@@ -1,0 +1,52 @@
+two numbers in the array whose sum is zero and return the indices.
+
+1, 2, -2, 3, 4
+
+1, 2
+
+
+List<Integer> twosumZero(int[] nums){
+	HashMap<integer, Integer> mapOfNums = new HashMap<Integer, Integer>();
+	for(int i=0;i<nums.length;i++){
+		if(!mapOfNums.containsKey(nums[i]){
+			mapOfNums.put(nums[i], i);
+		}
+		if(nums[i] + mapOfNums.containskey(0-nums[i]) == 0){
+			return new List<Integer>{i, mapOfNums.get(0-nums[i])};
+		}
+	}
+	return null;
+}
+
+three numbers in the array whose sum is zero
+
+
+[1, 2, -3, 4]
+
+[0, 0, -3, 4]
+
+[0,0,0,4]
+
+0->2
+4->3
+0,1,2
+
+0, 1, 2, 0, 0
+0 0 4 
+List<Integer> threeSumZero(int[] arr){
+	HashMap<Integer, Integer> mapOfNums = new HashMap<Integer, Integer>();
+	for(int i = 0;i<arr.length;i++){
+		mapOfNums.put(arr[i], i);
+	}
+	for(int i=0;i<arr.length; i++{
+		for(int j=i+1;j<arr.length;j++){
+			int auxSum = arr[i] + arr[j];
+			if(auxSum + mapOfNums.get(0-auxSum) == 0){
+				return new List<>{i, j, mapOfNums.get(0-auxSum)};
+			}
+		}
+	}
+	return null;
+	
+}
+

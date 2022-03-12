@@ -1,0 +1,25 @@
+class Main {
+  public static boolean strictlyIncreasing(int[] arr, int arr_len){
+    if(arr.length == 0){
+      return false;
+    }
+    int flag = 0;
+    for(int i=1; i<arr.length;i++){
+      if(arr[i] < arr[i-1] || arr[i] == arr[i-1]){
+        flag++;
+      }
+    }
+    return flag <= 2?true:false;
+  }
+  public static void main(String[] args) {
+
+    int[] arr = new int[]{2,2,3,4,5,5,5};
+    
+    if(strictlyIncreasing(arr, arr.length)){
+      System.out.println("Yes");
+    } else {
+      System.out.println("No");
+    }
+
+  }
+}

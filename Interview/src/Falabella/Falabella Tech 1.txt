@@ -1,0 +1,131 @@
+Polymorphism
+
+class Animal{
+	public String walks(){
+		return "Animal can walk on Land";
+	}
+}
+
+class Dog extends Animal(){
+	public String talk(){
+		return "Dog Barks";
+	}
+	
+	@Override
+	public String walks(){
+		return "Dog walks on 4 legs";
+	}
+}
+
+class Test{
+
+	public static void main(String[] args){
+		Animal animal = new Animal();
+		System.out.println(abc.walks); // Animal can walk on land
+
+		Animal dogAnimal = new Dog();
+		System.out.println(dogAnimal.walks); // Dogs walks on 4 legs
+		System.out.println(dogAnimal.talk); // Dog Barks
+	}
+}
+
+
+public String case(Integer abc){
+}
+
+public String case(Integer abc, Integer d){
+}
+
+Abstraction
+
+Encapsulation
+
+Interface Person{
+	public personid();
+	public personAge();
+}
+
+class Employee implements person{
+	Integer id;
+	integer age;
+	
+	public personId(integer id){
+		this.id = id;
+	}
+	
+	
+	
+}1,2,3,4,5,7,8,9
+
+5,6,7,9
+
+int size = 4;
+
+
+int arrLength = arr.lenght;
+
+int sum = 0;
+for(int a: arr){
+	sum+=a;
+}
+
+n(n+1)/2
+
+
+
+
+Binary Tree
+
+Node
+	data
+	left
+	right
+	
+input root node;
+
+output all the lead nodes;
+
+
+			 8
+		10		12
+	 1		2 3   4
+  11   13  14 
+  
+  
+  
+ 4
+ 
+ 1 -> 8
+ 2 -> 10, 12
+ 3 -> 1, 2, 3, 4
+ 4 -> 11, 13, 14
+ 
+8, 12, 10, 1, 2, 3, 4, 14, 13, 11
+  
+  
+queue -> 1, 2 , 3, 4
+temp -> 12  
+
+
+public List<Integer
+
+	
+
+public List<Integer> printAllLeafNodes(Node root, List<Integer> result){
+	if(root == null){
+		return null;
+	}
+	if(root.left == null && root.right == null){
+		result.add(root.data);
+	}
+	printAllLeafnodes(root.left, result);
+	printAllLeadNodes(root.right, result);
+	return result;
+}
+
+
+
+
+
+
+

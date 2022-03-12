@@ -1,0 +1,39 @@
+class Main {
+  public static void printKtSpriral(int[][] arr, int rows, int colums, int k){
+    //To keep the count of total elements in matrix
+    int total = 0;
+    int row = 0;
+    int col = 0;
+    while(total <= row*colums){
+      if(col < colums){
+        for(int i=0; i<colums; i++){
+          if(total == k){
+            System.out.println(arr[i][col]);
+            return;
+          }
+          total++;
+        }
+        col = colums - 1;
+        System.out.println("Col " + col);
+      }
+      if(row < rows){
+        for(int j=0; j<rows; j++){
+          if(total == k){
+            System.out.println(arr[j][col]);
+            return;
+          }
+          total++;
+        }
+        row = rows - 1;
+        System.out.println("Row " + row);
+      }
+    }
+  }
+  public static void main(String[] args){
+    int[][] arr = new int[][]{{1, 2, 3, 4},
+                              {5, 6, 7, 8},
+                              {9, 10, 11, 12},
+                              {13, 14, 15, 16}};
+    printKtSpriral(arr, arr.length, arr[0].length, 7);
+  }
+}
